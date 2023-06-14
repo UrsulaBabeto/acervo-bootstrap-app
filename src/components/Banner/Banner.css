@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.background {
+  width: 100vw;
+  background: linear-gradient(112deg, #5bc0de 40%, #fdcd3b 70%);
+}
+.background-banner {
+  background-image: url("../../assets/book2.png");
+  background-repeat: no-repeat;
+  background-size: 280px;
+  background-position: 100px;
+  width: 100vw;
+}
+.title-banner {
+  font-family: "Pacifico", cursive;
+  text-shadow: 1px 2px #5bc0de;
+  font-size: 45px;
+}
+.subtitle-banner {
+  font-family: "Yeseva", cursive;
+}
+.p-30 {
+  padding-right: 30px;
+}
+.p-50 {
+  padding-right: 50px;
+}
+
+.p-70 {
+  padding-right: 70px;
+}
