@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
 import CardProduct from "./components/CardProduct/CardProduct";
+import CardModal from "./components/CardModal/CardModal"
 
 import hp from "./assets/hp.jpg";
 import LOTR from "./assets/LOTR.jpg";
@@ -44,10 +45,6 @@ function App() {
     },
   ];
 
-  /*   const render = (item) => {
-    return <li>{item.title}</li>
-  } */
-
   return (
     <>
       <Header />
@@ -57,10 +54,9 @@ function App() {
           <CardProduct book={item} />
         ))}
       </div>
-      {/* {books.map(item => <CardProduct book={item}/>)} */}
-      {/*  <ul>
-        {books.map(item => render(item))}
-      </ul> */}
+      
+      {/* <CardModal image={hp} title="Harry Potter" subtitle="e a Pedra Filosofal" snippet="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolores asperiores ipsum molestiae tempore rerum animi exercitationem beatae rem perferendis ad delectus illum illo dignissimos molestias, ducimus vel consectetur veritatis!" price={50} id={543}></CardModal> */}
+
       <div className="d-flex justify-content-center">
         <a className="lista-livros" href="#">
           <FaSearchengin />
@@ -73,12 +69,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* /* const BASEPATH = "../../images/FILE";
-<img
-            src={BASEPATH.replace("FILE", props.imagePath)}
-            className="rounded-start img-fluid"
-            alt="..."
-          />  */
-}
