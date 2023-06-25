@@ -5,12 +5,14 @@ import Header from "../../components/Header/Header";
 import Banner from "../../components/Banner/Banner";
 import Footer from "../../components/Footer/Footer";
 import CardProduct from "../../components/CardProduct/CardProduct";
-import CardModal from "../../components/CardModal/CardModal"
 
 import hp from "../../assets/hp.jpg";
 import LOTR from "../../assets/LOTR.jpg";
 import pridePrejudice from "../../assets/pridePrejudice.jpg";
 import madHatter from "../../assets/madHatter.jpg";
+
+import { useContext, useEffect } from "react";
+import { BannerContext } from "../../contexts/BannerContext";
 
 function MainPage() {
   const books = [
@@ -43,6 +45,16 @@ function MainPage() {
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
     },
   ];
+
+  const { setBanner } = useContext(BannerContext);
+   
+  useEffect(() => {
+      setBanner({
+        title: "Clube do Livro",
+        subtitle: "Venha Conhecer",
+        openingHours: "Todas as terças as 20h"
+      });
+    }, []);
 
   return (
     <>

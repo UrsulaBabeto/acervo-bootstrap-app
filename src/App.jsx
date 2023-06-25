@@ -2,26 +2,28 @@ import "./App.css";
 
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-
+import { BannerProvider } from "./contexts/BannerContext";
 import MainPage from "./pages/MainPage/MainPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-import CardProduct from "./components/CardProduct/CardProduct";
+
 
 function App() {
- return(
-  <>
-  <Router>
-    <Routes>
-        <Route path="/" Component={MainPage}/>
-        <Route path="/contato" Component={ContactPage}/>
-        {/* <Route path="/produtos" Component={CardProduct}/>
-        <Route path="/faq" Component={ContactPage}/> */}
-        <Route path="*" Component={NotFoundPage}/>
-    </Routes>
-  </Router>
-  </>
- )
+  return (
+    <BannerProvider>
+          
+      <Router>
+        <Routes>
+            <Route path="/" element={<MainPage/>} />
+            <Route path="/contato" element={<ContactPage/>} />
+            {/* <Route path="/produtos" element={CardProduct}/>
+                <Route path="/faq" element={ContactPage}/> */}
+            <Route path="*" element={<NotFoundPage/>} />
+        </Routes>
+      </Router>
+      
+    </BannerProvider>
+  );
 }
 
 export default App;
