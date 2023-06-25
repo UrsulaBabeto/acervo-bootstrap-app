@@ -1,5 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 import "../Footer/Footer.css";
+
 import {
   FaFacebookSquare,
   FaInstagram, 
@@ -15,7 +18,7 @@ function Footer() {
             <li className="contato-li">Política de Vendas</li>
             <li className="contato-li">Trocas e Privacidade</li>
             <li className="contato-li">Termos e Condições</li>
-            <li className="contato-li">Entre em Contato</li>
+            <li className="contato-li"><Link className="list-group-item" to={"/contato"}>Entre em Contato</Link> </li>
           </ul>
         </div>
 
