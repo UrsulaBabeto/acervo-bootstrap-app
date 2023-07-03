@@ -22,6 +22,8 @@ function MainPage() {
       subtitle: "e as Reliquias da Morte",
       snippets:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        price:39,
+        id:34
     },
     {
       photo: LOTR,
@@ -29,6 +31,8 @@ function MainPage() {
       subtitle: "Os anéis do Poder",
       snippets:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        price:79,
+        id:39
     },
     {
       photo: pridePrejudice,
@@ -36,6 +40,8 @@ function MainPage() {
       subtitle: "  Preconceito  ",
       snippets:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        price:88,
+        id:32
     },
     {
       photo: madHatter,
@@ -43,6 +49,8 @@ function MainPage() {
       subtitle: "no país das Maravilhas",
       snippets:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        price:76,
+        id:3
     },
   ];
 

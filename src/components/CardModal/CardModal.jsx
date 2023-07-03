@@ -1,22 +1,22 @@
-/* Deverá ser criado um componente de Card utilizando React no qual deve ser passado uma propriedade
- contendo o objeto do produto, o qual deve conter propriedades como nome (string obrigatório),
-  valor (number obrigatório), descricão (string obrigatório), caracteristicas (array de string contendo no
-     mínimo uma como obrigatória) e o id (number obrigatório).
-Nesse exercício deve se usar a lib prop-types para validar o recebimento dessa prop que será enviada.
-Sejam criativos podem utilizar uma outra paleta de cores no projeto assim como criar o próprio nome da empresa de vocês. */
 
 import React from "react";
 import { PropTypes } from "prop-types";
 
 import "../CardModal/CardModal.css";
 
-function CardModal({ image, title, subtitle, snippet, price, id }) {
+function CardModal({ image, title, subtitle, snippet, price, id}) {
   return (
     <>
-      <div className="card-div m-4">
-        <div className="card-body text-center ">
-          <img className="img img-card" width={490} height={290} alt="..." />
-          {image}
+      <div className="modal-overlay">
+        <div className="modal-content d-flex flex-column">
+          <img
+            className="img img-card"
+            src={image}
+            width={490}
+            height={290}
+            alt="..."
+          />
+
           <div className="m-3">
             <h4
               className="card-title  rgb(var(--bs-body-color))"
@@ -31,11 +31,9 @@ function CardModal({ image, title, subtitle, snippet, price, id }) {
             <p className="card-text text-start">{snippet}</p>
             <span className="price">R${price}</span>
             <span className="id">{id}</span>
-            <a href="#" className=" button  ">
-              Comprar
-            </a>
           </div>
         </div>
+          <button className="button text-light w-25" >x</button>
       </div>
     </>
   );
@@ -50,13 +48,3 @@ CardModal.propTypes = {
 };
 
 export default CardModal;
-/* 
-<section class="bikes">
-                        
-
-                        <div class="images-products">
-                            <img class="img.bike" src="./assets/images/magic.jpg" alt="">
-                            <div class="price">R$ 2499</div>
-                        </div>
-        
-                    </section> */

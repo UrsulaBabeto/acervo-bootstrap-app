@@ -1,57 +1,81 @@
-.button{
-    text-decoration: none;
-    box-shadow: 0 0 2px #5bc0de;
-    padding: 10px 20px;
-    margin: 0 0 0px 50%;
-    border-radius: 4px;
-    }
-    .button:hover{
-        font-weight: 600;
-        box-shadow: 2px 2px 3px #5bc0de; 
-    }
-    .button:active{
-        background-color: #5bc0de;
-        color: white;
-    }
-    .card-title{
-        font-size: 26px;
-    }
-    .subtitle{
-        font-size: 18px;
-        padding: 5px;
-    }
-   
-.img{
-    max-width: 490px;
-    max-height: 290px ;
-    object-fit: contain;
-    padding: 10px;
+.section {
+  display: flex;
+  flex-direction: column;
 }
-.card-div{
-    max-width: 534px !important;
-    max-height: 523px !important;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 40px;
-    padding: 10px;
-    border: 1px solid rgb(177, 176, 176);
-    border-radius: 4px;
-    position: relative;
+.button {
+  text-decoration: none;
+  box-shadow: 0 0 2px #5bc0de;
+  padding: 10px 20px;
+  margin: 0 0 0px 50%;
+  border-radius: 4px;
 }
-.card-text{
-    margin-bottom: 40px;
+.button:hover {
+  font-weight: 600;
+  box-shadow: 2px 2px 3px #5bc0de;
 }
-.id{
- position: absolute;
- right: 10px;
- top:10px;
- color:#b9b9b9
+.button:active {
+  background-color: #5bc0de;
+  color: white;
 }
-.price{
- position: absolute;
- left: 30px;
- bottom: 20px;
- font-size: 1.5rem;
+.card-title {
+  font-size: 26px;
+}
+.subtitle {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.img {
+margin: 0 auto;
+  object-fit: contain;
+  padding: 10px;
+}
+.card-div {
+  max-width: 534px !important;
+  max-height: 523px !important;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px;
+  border: 1px solid rgb(177, 176, 176);
+  border-radius: 4px;
+}
+.card-text {
+  margin-bottom: 40px;
+}
+.id {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #b9b9b9;
+}
+.price {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  margin: 0 auto;
+  margin-left: 25%;
+  color: #fff;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 100px;
+  height: fit-content;
+  margin: 0 auto;
+  
 }

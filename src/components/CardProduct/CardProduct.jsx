@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "../CardProduct/CardProduct.css";
-
+import CardModal from "../CardModal/CardModal";
 
 function CardProduct(props) {
+  const [renderModal, setRenderModal] = useState(false);
+
+  const showModal = () => {
+    setRenderModal(!renderModal);
+  };
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
   const renderBook = (itemBook) => {
     return (
       <>
@@ -20,9 +29,22 @@ function CardProduct(props) {
               </h4>
 
               <p className="card-text text-start">{itemBook.snippets}</p>
-              <a href="#" className=" button  ">
+              <button href="#" className=" button" onClick={showModal}>
                 Comprar
-              </a>
+               
+              </button>
+              {renderModal && (
+                  <CardModal
+                    image={itemBook.photo}
+                    title={itemBook.title}
+                    subtitle={itemBook.subtitle}
+                    snippet={itemBook.snippets}
+                    price={itemBook.price}
+                    id={itemBook.id}
+                    onClose={toggleModal}
+                    className="modal"
+                  />
+                )}
             </div>
           </div>
         </div>
