@@ -65,8 +65,6 @@ function MainPage() {
           <CardProduct book={item} />
         ))}
       </div>
-      
-      {/* <CardModal image={hp} title="Harry Potter" subtitle="e a Pedra Filosofal" snippet="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolores asperiores ipsum molestiae tempore rerum animi exercitationem beatae rem perferendis ad delectus illum illo dignissimos molestias, ducimus vel consectetur veritatis!" price={50} id={543}></CardModal> */}
 
       <div className="d-flex justify-content-center">
         <a className="lista-livros" href="#">

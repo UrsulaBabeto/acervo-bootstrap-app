@@ -15,7 +15,7 @@ function Footer() {
         <div className="d-flex flex-column mt-5">
           <h2>Contato</h2>
           <ul className="contato">
-            <li className="contato-li"><Link className="list-group-item" to={"/faq"}> Política de Vendas</Link></li>
+            <li className="contato-li"><Link className="list-group-item" to={"/faq"}> FAQ</Link></li>
             <li className="contato-li">Trocas e Privacidade</li>
             <li className="contato-li">Termos e Condições</li>
             <li className="contato-li"><Link className="list-group-item" to={"/contato"}>Entre em Contato</Link> </li>
@@ -42,9 +42,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-     {/*  <div className="container bg-black mw-100">
-        <p className="text-warning">• View Galery •</p>
-      </div> */}
+   
     </>
   );
 }
