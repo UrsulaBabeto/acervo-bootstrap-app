@@ -62,7 +62,7 @@ function MainPage() {
       <Banner />
       <div className="row inline m-5 ">
         {books.map((item) => (
-          <CardProduct book={item} />
+          <CardProduct key={item.title} book={item} />
         ))}
       </div>
 

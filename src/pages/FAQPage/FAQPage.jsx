@@ -4,7 +4,20 @@ import Header from "../../components/Header/Header";
 import Search from "../../components/Search/Search";
 import FAQComponent from "../../components/FAQComponent/FAQComponent";
 
+import { useContext, useEffect } from "react";
+import { BannerContext } from "../../contexts/BannerContext";
+
 function FAQPage() {
+
+      const { setBanner } = useContext(BannerContext);
+   
+    useEffect(() => {
+        setBanner({
+          title: "F A Q",
+          subtitle: "Tire suas duvidas",
+          openingHours: "cadastre-se e receba a nossa Newsletter"
+        });
+      }, []);
   return (
     <>
       <Header />
