@@ -10,9 +10,7 @@ function CardProduct(props) {
   const showModal = () => {
     setRenderModal(!renderModal);
   };
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
+
   const renderBook = (itemBook) => {
     return (
       <>
@@ -41,8 +39,6 @@ function CardProduct(props) {
                     snippet={itemBook.snippets}
                     price={itemBook.price}
                     id={itemBook.id}
-                    onClose={toggleModal}
-                    className="modal"
                   />
                 )}
             </div>
