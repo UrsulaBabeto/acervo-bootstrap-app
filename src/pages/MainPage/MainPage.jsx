@@ -68,7 +68,7 @@ function MainPage() {
     <>
       <Header />
       <Banner />
-      <div className="row inline m-5 ">
+      <div className="d-flex m-5 flex-wrap">
         {books.map((item) => (
           <CardProduct key={item.title} book={item} />
         ))}

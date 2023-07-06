@@ -1,19 +1,10 @@
-
+.fs-20{
+    font-size: 20px !important;
+}
 .nav-text:hover{
     text-shadow:0 1px 1px #5bc0de;
     font-weight: 600;
 }
 .nav-text:active{
     color:#5bc0de !important;
-}
-.header{
-    position:fixed;
-    width: 100vw;
-   
-}
-.fs-20{
-    font-size: 20px;
-}
-.pl-20{
-    padding-left: 20px;
 }
