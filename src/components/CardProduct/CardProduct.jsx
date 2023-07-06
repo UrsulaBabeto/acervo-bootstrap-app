@@ -9,12 +9,13 @@ function CardProduct(props) {
 
   const showModal = () => {
     setRenderModal(!renderModal);
+ 
   };
 
   const renderBook = (itemBook) => {
     return (
       <>
-        <Card className="col-5 ">
+        <Card className="col-5 mb-5 ">
           <Card.Img
             className="img"
             variant="top"
@@ -24,14 +25,14 @@ function CardProduct(props) {
             height={290}
           />
           <Card.Body>
-            <Card.Title>
+            <Card.Title className="text-center">
               {" "}
               {itemBook.title}
               <span className="text-secondary subtitle d-block">
                 {itemBook.subtitle}
               </span>
             </Card.Title>
-            <Card.Text>{itemBook.snippet}</Card.Text>
+      
             <span className="id">{itemBook.id}</span>
             <Button
               variant="outline-info"

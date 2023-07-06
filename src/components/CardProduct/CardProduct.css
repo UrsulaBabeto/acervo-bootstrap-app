@@ -1,15 +1,19 @@
-    .button:hover{
-        font-weight: 600;
-        box-shadow: 2px 2px 3px #5bc0de; 
-    }
-    .button:active{
-        background-color: #5bc0de;
-        color: white;
-    }
-   
+.button {
+ width: 40%;
+  margin: 0 auto;
+}
+.button:hover {
+  font-weight: 600;
+  box-shadow: 2px 2px 3px #5bc0de;
+}
+.button:active {
+  background-color: #5bc0de;
+  color: white;
+}
 
-.card-div{
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.card-div {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 30px;
 }

@@ -26,9 +26,8 @@
 }
 
 .img {
-margin: 0 auto;
+  margin: 0 auto;
   object-fit: contain;
-  padding: 10px;
 }
 .card-div {
   max-width: 534px !important;
@@ -54,28 +53,14 @@ margin: 0 auto;
 .price {
   position: absolute;
   left: 30px;
-  bottom: 20px;
+  bottom: 10px;
   font-size: 1.5rem;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 9999;
-  margin: 0 auto;
-  margin-left: 25%;
-  color: #fff;
 }
 
 .modal-content {
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   width: 100px;
   height: fit-content;
   margin: 0 auto;
-  
 }
