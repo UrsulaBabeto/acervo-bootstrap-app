@@ -15,7 +15,7 @@ function CardModal() {
     <>
       <Modal show={true} fullscreen="xl-down">
         <Modal.Header closeButton onClick={handleShow}>
-          <img className="img" src={book.photo} height={290} alt="..." />
+          <img className="img" src={book.photo} height={290} width={390} alt="..." />
         </Modal.Header>
         <Modal.Title className="text-center">
           {book.title}
