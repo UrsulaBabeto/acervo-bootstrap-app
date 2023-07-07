@@ -41,8 +41,8 @@
   border: 1px solid rgb(177, 176, 176);
   border-radius: 4px;
 }
-.card-text {
-  margin-bottom: 40px;
+p{
+  padding: 20px;
 }
 .id {
   position: absolute;
@@ -59,8 +59,12 @@
 
 .modal-content {
   background-color: #fff;
-  padding: 30px;
+  padding: 10px;
   width: 100px;
   height: fit-content;
   margin: 0 auto;
+}
+.btn-close{
+  margin-left: 10px !important;
+
 }

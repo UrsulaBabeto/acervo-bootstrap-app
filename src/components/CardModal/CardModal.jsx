@@ -1,35 +1,33 @@
-import React, { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Modal } from "react-bootstrap";
 
 import "../CardModal/CardModal.css";
+import { ModalContext } from "../../contexts/ModalContext";
 
-function CardModal({ image, title, subtitle, snippet, price, id }) {
-  const [show, setShow] = useState(false);
+function CardModal() {
+  const { showModal, setShowModal, book, setBook } = useContext(ModalContext);
 
-  const handleClose = () => {
-    setShow(false);
+  const handleShow = () => {
+    setShowModal(false);
+    setBook({});
   };
-
   return (
     <>
-      <Modal show={show} onHide={handleClose} fullscreen="xl-down">
-        <Modal.Header  closeButton>
-          <img
-            className="img"
-            src={image}            
-            height={290}
-            alt="..."
-          />
-           </Modal.Header>
-          <Modal.Title className="text-center">
-            {title}
-            <span className="text-secondary subtitle d-block ">{subtitle}</span>
-          </Modal.Title>
-       
-        <Modal.Body><p>{snippet}</p></Modal.Body>
+      <Modal show={true} fullscreen="xl-down">
+        <Modal.Header closeButton onClick={handleShow}>
+          <img className="img" src={book.photo} height={290} alt="..." />
+        </Modal.Header>
+        <Modal.Title className="text-center">
+          {book.title}
+          <span className="text-secondary subtitle d-block ">{book.subtitle}</span>
+        </Modal.Title>
+
+        <Modal.Body>
+          <p>{book.snippets}</p> <span className="price">R${book.price}</span>
+        </Modal.Body>
+
         <Modal.Footer>
-          <span className="price">R${price}</span>
-          <span className="id">{id}</span>
+          <span className="id">{book.id}</span>
         </Modal.Footer>
       </Modal>
     </>

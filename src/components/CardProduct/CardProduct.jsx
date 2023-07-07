@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Card, Button } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Button, Card } from "react-bootstrap";
 
+import { ModalContext } from "../../contexts/ModalContext";
 import "../CardProduct/CardProduct.css";
-import CardModal from "../CardModal/CardModal";
 
 function CardProduct(props) {
-  const [renderModal, setRenderModal] = useState(false);
+  const { setShowModal, setBook } = useContext(ModalContext);
 
   const showModal = () => {
-    setRenderModal(!renderModal);
- 
+    setBook(props.book);
+    setShowModal(true);
   };
 
   const renderBook = (itemBook) => {
@@ -21,18 +21,17 @@ function CardProduct(props) {
             variant="top"
             border="info"
             src={itemBook.photo}
-            width={490}
+            width={400}
             height={290}
           />
           <Card.Body>
             <Card.Title className="text-center">
-              {" "}
               {itemBook.title}
               <span className="text-secondary subtitle d-block">
                 {itemBook.subtitle}
               </span>
             </Card.Title>
-      
+
             <span className="id">{itemBook.id}</span>
             <Button
               variant="outline-info"
@@ -43,18 +42,6 @@ function CardProduct(props) {
             </Button>
           </Card.Body>
         </Card>
-
-        {renderModal && (
-          <CardModal
-            image={itemBook.photo}
-            title={itemBook.title}
-            subtitle={itemBook.subtitle}
-            snippet={itemBook.snippets}
-            price={itemBook.price}
-            id={itemBook.id}
-          />
-        )}
-        <div></div>
       </>
     );
   };
