@@ -56,7 +56,7 @@ function FormContact() {
           onSubmit={handleSubmit}
         >
           <Row className="centralize">
-            <Form.Group as={Col} md="4">
+            <Form.Group as={Col} md="4" >
               <Form.Label>Nome</Form.Label>
               <Form.Control
                 required
@@ -65,6 +65,7 @@ function FormContact() {
                 id="name"
                 placeholder="Nome"
                 onChange={handleChange}
+                
               />
               {/*    <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
             </Form.Group>
