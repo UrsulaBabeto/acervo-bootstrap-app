@@ -6,7 +6,7 @@
   background: linear-gradient(112deg, #5bc0de 40%, #fdcd3b 70%);
 }
 .background-banner {
-  background-image: url("../../assets/book2.png");
+  background-image: url("../../../public/assets/book2.png");
   background-repeat: no-repeat;
   background-size: 280px;
   background-position: 100px;

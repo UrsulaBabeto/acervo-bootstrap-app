@@ -1,5 +1,5 @@
 
-import imge from "../../assets/404.jpg";
+import imge from "../../../public/assets/404.jpg";
 function NotFoundPage() {
   return (
     <div className="d-flex flex-column align-items-center">

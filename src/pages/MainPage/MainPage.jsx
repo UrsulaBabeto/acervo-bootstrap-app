@@ -6,10 +6,10 @@ import Banner from "../../components/Banner/Banner";
 import Footer from "../../components/Footer/Footer";
 import CardProduct from "../../components/CardProduct/CardProduct";
 
-import hp from "../../assets/hp.jpg";
-import LOTR from "../../assets/LOTR.jpg";
-import pridePrejudice from "../../assets/pridePrejudice.jpg";
-import madHatter from "../../assets/madHatter.jpg";
+import hp from "../../../public/assets/hp.jpg";
+import LOTR from "../../../public/assets/LOTR.jpg";
+import pridePrejudice from "../../../public/assets/pridePrejudice.jpg";
+import madHatter from "../../../public/assets/madHatter.jpg";
 
 import { useContext, useEffect } from "react";
 import { BannerContext } from "../../contexts/BannerContext";
@@ -68,7 +68,7 @@ function MainPage() {
     <>
       <Header />
       <Banner />
-      <div className="d-flex m-5 flex-wrap ">
+      <div className="d-flex justify-content-center mt-5 flex-wrap col-md-12">
         {books.map((item) => (
           <CardProduct key={item.title} book={item} />
         ))}
